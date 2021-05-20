@@ -1,3 +1,4 @@
+```
 ---
 
 apiVersion: v1
@@ -14,7 +15,6 @@ spec:
   selector:
     app: {{ app_name }}
 
-{% if aws_loadbalancer_controller_version == "v1" %}
 ---
 
 apiVersion: extensions/v1beta1
@@ -70,4 +70,4 @@ spec:
               serviceName: "{{ app_name }}"
               servicePort: {{ listen_port }}
 
-{% endif %}
+```
